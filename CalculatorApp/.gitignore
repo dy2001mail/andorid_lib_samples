@@ -1,0 +1,61 @@
+# === Java/Android 编译输出 ===
+/build/
+/*/build/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+*.so
+*.jar
+*.war
+
+# === Android Studio/Gradle 文件 ===
+.gradle/
+.idea/
+.local.properties
+*.iml
+*.hprof
+.cxx/
+
+# === OS 缓存 ===
+.DS_Store
+Thumbs.db
+
+# === 日志 & 临时文件 ===
+*.log
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# === Gradle 缓存 ===
+**/build/
+.gradle/
+.gradle/caches/
+.gradle/daemon/
+.gradle/wrapper/dists/
+
+# === Android Studio 特定文件 ===
+.idea/
+*.iws
+*.ipr
+*.iml
+captures/
+.navigation/
+output.json
+
+# === Jetpack Compose 编译缓存（如果使用 Compose）===
+.kapt/
+.ksp/
+
+# === Keystore 文件（⚠️ 不建议提交）===
+*.jks
+*.keystore
+
+# === 其他 IDE 相关文件 ===
+.vscode/
+*.code-workspace
+
+# === 本地配置 ===
+local.properties
