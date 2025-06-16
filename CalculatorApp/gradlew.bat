@@ -1,2 +1,3 @@
 @echo off
-echo Use gradlew wrapper in your local system.
+set DIR=%~dp0
+"%DIR%\gradle\wrapper\gradle-wrapper.jar" %*

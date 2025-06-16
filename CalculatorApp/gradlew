@@ -1,2 +1,4 @@
-#!/bin/bash
-echo 'Use ./gradlew wrapper in your local system to generate the gradle wrapper.'
+#!/bin/sh
+export JAVA_HOME=${JAVA_HOME:-$(/usr/libexec/java_home)}
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+exec "$DIR/gradle/wrapper/gradle-wrapper.jar" "$@"
