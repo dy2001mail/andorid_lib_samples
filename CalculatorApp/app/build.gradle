@@ -1,17 +1,18 @@
+
 plugins {
     id 'com.android.application'
 }
 
 android {
     namespace 'com.example.calculatorapp'
-    compileSdk = 34
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.calculatorapp"
-        minSdk = 21
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
@@ -23,6 +24,9 @@ android {
 }
 
 dependencies {
-    implementation project(":calculatorlib")
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation project(':calculatorlib')
+
+    // 添加 Material Components 依赖
+    implementation 'com.google.android.material:material:1.11.0'
 }
+

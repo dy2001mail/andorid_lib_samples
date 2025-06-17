@@ -1,11 +1,12 @@
+
 package com.example.calculatorlib;
 
 public class Calculator {
-    public static int add(int a, int b) {
+    public int add(int a, int b) {
         return a + b;
     }
 
-    public static int subtract(int a, int b) {
+    public int subtract(int a, int b) {
         return a - b;
     }
 }

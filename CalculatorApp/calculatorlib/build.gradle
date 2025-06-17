@@ -1,25 +1,29 @@
+
 plugins {
     id 'com.android.library'
 }
 
 android {
     namespace 'com.example.calculatorlib'
-    compileSdk = 34
+    compileSdk 34
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 34
-        consumerProguardFiles "consumer-rules.pro" // 可选
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
-
-dependencies {
+tasks.register("makeAar", Copy) {
+    dependsOn assembleRelease
+    from("build/outputs/aar")
+    include("calculatorlib-release.aar")
+    into("${rootDir}/output-aar")
 }
